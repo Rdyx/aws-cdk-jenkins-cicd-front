@@ -28,7 +28,7 @@ pipeline {
     environment {
         // To run npm tests in non interactive mode
         CI = true
-        BRANCH_ENV = "{env.BRANCH_NAME == 'develop' ? 'develop' : env.BRANCH_NAME == 'master' ? 'production' : 'none'}"
+        BRANCH_ENV = "${env.BRANCH_NAME == 'develop' ? 'develop' : env.BRANCH_NAME == 'master' ? 'production' : 'none'}"
     }
 
     stages {
@@ -45,7 +45,6 @@ pipeline {
                     }
                     echo "test"
                     echo env.BRANCH_ENV
-                    echo deploy
 
                     // Basically, you should not need to deploy front on a test env
                     // But in case you really need, add DEPLOY at the end of the commit message
