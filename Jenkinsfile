@@ -9,11 +9,11 @@ def load_conf(branch) {
             project_name = readJSON(file: './conf/dev_conf.json')["PROJECT_NAME"]
             stage = readJSON(file: './conf/dev_conf.json')["STAGE"]
         case 'master':
-            project_name = readJSON(file: './conf/dev_conf.json')["PROJECT_NAME"]
-            stage = readJSON(file: './conf/dev_conf.json')["STAGE"]
+            project_name = readJSON(file: './conf/prod_conf.json')["PROJECT_NAME"]
+            stage = readJSON(file: './conf/prod_conf.json')["STAGE"]
         default:
-            project_name = readJSON(file: './conf/dev_conf.json')["PROJECT_NAME"]
-            stage = readJSON(file: './conf/dev_conf.json')["STAGE"]
+            project_name = readJSON(file: './conf/test_conf.json')["PROJECT_NAME"]
+            stage = readJSON(file: './conf/test_conf.json')["STAGE"]
             stage += '-' + env.BRANCH_NAME.split('-')[0].split('/')[1]
     }
 
