@@ -43,7 +43,7 @@ pipeline {
                         echo "This build will not be deployed."
                         deploy = false
                     }
-                    echo BRANCH_ENV
+                    echo env.BRANCH_ENV
                     echo deploy
 
                     // Basically, you should not need to deploy front on a test env
