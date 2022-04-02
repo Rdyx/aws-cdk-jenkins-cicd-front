@@ -43,6 +43,7 @@ pipeline {
                         echo "This build will not be deployed."
                         deploy = false
                     }
+                    echo deploy
 
                     // Basically, you should not need to deploy front on a test env
                     // But in case you really need, add DEPLOY at the end of the commit message
