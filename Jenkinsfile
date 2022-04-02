@@ -85,7 +85,8 @@ pipeline {
                 }
             }
             steps {
-                sh "make deploy"
+
+                sh "make deploy \"BUCKET_NAME=${BUCKET_NAME}\""
             }
         }
         stage('After Deploy') {
