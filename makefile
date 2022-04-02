@@ -15,8 +15,9 @@ buildapp:
 	npm run build
 
 deploy:
-	echo BUCKET_NAME
-	aws s3 cp build s3://front-$BUCKET_NAME/ --recursive
+	echo $BUCKET_NAME
+	echo ${BUCKET_NAME}
+	aws s3 cp build s3://front-${BUCKET_NAME}/ --recursive
 
 afterdeploy:
 	echo ""
