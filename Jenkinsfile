@@ -23,7 +23,7 @@ def load_conf(branch) {
 pipeline {
     agent any
 
-    tools {nodejs: 'nodejs'}
+    tools {nodejs "nodejs"}
 
     environment {
         // To run npm tests in non interactive mode
