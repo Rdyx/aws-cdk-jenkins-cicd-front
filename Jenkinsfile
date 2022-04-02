@@ -27,7 +27,7 @@ pipeline {
 
     environment {
         // To run npm tests in non interactive mode
-        env.CI = true
+        CI = true
         BRANCH_ENV = "{env.BRANCH_NAME == 'develop' ? 'develop' : env.BRANCH_NAME == 'master' ? 'production' : 'none'}"
     }
 
