@@ -19,6 +19,3 @@ deploy:
 
 afterdeploy:
 	echo ""
-
-cleanworkspace:
-	echo ""
