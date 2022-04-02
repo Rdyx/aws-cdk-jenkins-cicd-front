@@ -43,6 +43,7 @@ pipeline {
                         echo "This build will not be deployed."
                         deploy = false
                     }
+                    echo "test"
                     echo env.BRANCH_ENV
                     echo deploy
 
