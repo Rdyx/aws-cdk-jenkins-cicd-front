@@ -91,7 +91,7 @@ pipeline {
             }
             steps {
 
-                sh "make deploy"
+                sh "make deploy \"BUCKET_NAME=${env.BUCKET_NAME}\""
             }
         }
         stage('After Deploy') {
