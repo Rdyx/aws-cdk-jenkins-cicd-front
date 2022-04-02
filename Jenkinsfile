@@ -65,14 +65,19 @@ pipeline {
                 load_conf(env.BRANCH_NAME)
             }
         }
-        stage('Before Deploy') {
-            steps {
-                sh "make beforedeploy"
-            }
-        }
         stage('Unit Tests') {
             steps {
                 sh "make unittests"
+            }
+        }
+        stage('Before Deploy') {
+            when {
+                expression {
+                    deploy == true
+                }
+            }
+            steps {
+                sh "make beforedeploy"
             }
         }
         stage('Build App') {
