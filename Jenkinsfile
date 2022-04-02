@@ -17,7 +17,7 @@ def load_conf(branch) {
             stage += '-' + env.BRANCH_NAME.split('-')[0].split('/')[1]
     }
 
-    make BUCKET_NAME="${env.BUCKET_NAME}${project_name}-${stage}"
+    env.BUCKET_NAME = env.BUCKET_NAME + project_name + "-" + stage
 }
 
 pipeline {
