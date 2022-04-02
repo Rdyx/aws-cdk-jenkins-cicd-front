@@ -106,7 +106,7 @@ pipeline {
         }
         stage('Clear Workspace') {
             steps {
-                sh "make clearworkspace"
+                sh "make cleanworkspace"
             }
         }
     }
