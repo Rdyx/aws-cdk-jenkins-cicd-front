@@ -58,6 +58,11 @@ pipeline {
                 sh "make init"
             }
         }
+        stage('Load Conf') {
+            steps {
+                load_conf(env.BRANCH_NAME)
+            }
+        }
         stage('Before Deploy') {
             steps {
                 sh "make beforedeploy"
@@ -86,7 +91,7 @@ pipeline {
             }
             steps {
 
-                sh "make deploy \"BUCKET_NAME=${env.BUCKET_NAME}\""
+                sh "make deploy"
             }
         }
         stage('After Deploy') {
