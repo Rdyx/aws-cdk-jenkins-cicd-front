@@ -1,0 +1,5 @@
+{
+  "PROJECT_NAME": "project-name",
+  "STAGE": "test",
+  "AWS_DEFAULT_REGION": "eu-west-3"
+}
